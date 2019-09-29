@@ -31,7 +31,7 @@
     "chai": "4.2.0",
     "chai-jquery": "2.1.0",
     "chimp": "0.51.1",
-    "eslint": "^6.4.0",
+    "eslint": "^6.5.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-import-resolver-meteor": "^0.4.0",
     "eslint-plugin-chai-friendly": "0.4.1",
