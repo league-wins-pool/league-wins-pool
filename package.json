@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-meteor": "^6.0.0",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react": "^7.15.0",
     "eslint-plugin-react-hooks": "2.0.1",
     "selenium-webdriver": "^3.6.0",
     "shell-source": "1.1.0",
