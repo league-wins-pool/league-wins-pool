@@ -9,7 +9,9 @@
   },
   "statusCheckVerify": true,
   "ignoreDeps": [
+    "bcrypt",
     "loggly",
+    "node",
     "winston",
     "winston-loggly-bulk"
   ],

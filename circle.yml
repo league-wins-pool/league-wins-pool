@@ -9,7 +9,7 @@ jobs:
       LC_ALL: C.UTF-8
     
     docker:
-      - image: abernix/meteord:node-8.16.1-base
+      - image: abernix/meteord:node-12.16.1-base
       - image: circleci/mongo:4.0.6
         command: --port 3001
 
@@ -34,17 +34,14 @@ jobs:
       - run:
           name: Install Selenium dependencies
           command: |
-            echo "deb http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list
-            apt-get -o Acquire::Check-Valid-Until=false update
-            apt-get install -t jessie-backports ca-certificates-java=20161107~bpo8+1 -y
-            apt-get install openjdk-8-jdk -y
-            update-java-alternatives -s java-1.8.0-openjdk-amd64
+            apt-get update
+            apt-get install openjdk-8-jdk-headless -y
 
       - run:
           name: Install Chrome
           command: |
-            apt-get install lsb-release=4.1+Debian13+nmu1 libappindicator3-1=0.4.92-3.1 fonts-liberation=1.07.4-1 -y
-            apt-get install libxss1=1:1.2.2-1 wget xdg-utils libgbm1 -y
+            apt-get install lsb-release libappindicator3-1 fonts-liberation -y
+            apt-get install libxss1 wget xdg-utils libgbm1 libasound2 -y
             CHROME_VERSION=79.0.3945.130-1
             curl -L -o google-chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb
             dpkg -i google-chrome.deb
@@ -83,7 +80,7 @@ jobs:
           paths:
             - ~/.cache/yarn
             - ~/project/node_modules
-            - /opt/circleci/nodejs/v8.16.1/lib/node_modules
+            - /opt/circleci/nodejs/v12.16.1/lib/node_modules
 
       - restore_cache:
           name: Restore Meteor release cache
@@ -129,7 +126,7 @@ jobs:
       METEOR_ALLOW_SUPERUSER: 1
 
     docker:
-      - image: abernix/meteord:node-8.16.1-base
+      - image: abernix/meteord:node-12.16.1-base
       
     steps:
       - checkout

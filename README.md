@@ -4,7 +4,7 @@
 
 1. [Install Meteor](https://www.meteor.com/install)
 2. [Install NVM](https://github.com/nvm-sh/nvm)
-3. `nvm install 8.16.1`
+3. `nvm install <version in .nvmrc>`
 4. [Install Yarn](https://classic.yarnpkg.com/en/docs/install)
 5. `yarn`
 6. `yarn global add mup@1.4.6` for managing server deployments
@@ -37,9 +37,9 @@ $ yarn
 
 ### Updating Meteor
 
-1. `meteor update --release X.Y.Z`
-2. Update `.nvmrc` with Node version
-3. `nvm install X.Y.Z`
+1. Update `.nvmrc` with new Node version
+2. `nvm install X.Y.Z`
+3. `meteor update --release X.Y.Z`
 4. Update `circle.yml` with Docker container that supports Node version
 
 
