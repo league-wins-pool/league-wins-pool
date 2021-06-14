@@ -31,7 +31,7 @@
     "chai": "4.3.4",
     "chai-jquery": "2.1.0",
     "chimpy": "3.0.4",
-    "chromedriver": "79.0.3",
+    "chromedriver": "91.0.1",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-import-resolver-meteor": "0.4.0",
